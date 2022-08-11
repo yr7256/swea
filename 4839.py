@@ -32,27 +32,29 @@ for t in range(T):                       #
         ans = 0                          #
     print(f'#{t+1} {ans}')               #
 
-# def binary_search(book, target):
-#     count = 0
-#     left = 1
-#     right = book
-#     while left <= right:
-#         middle = (left+right)//2
-#         count += 1
-#         if middle == target:
-#             return count
-#         elif middle > target:
-#             right = middle
-#         else:
-#             left = middle
-#
-# T=int(input())
-# for t in range(T):
-#     P, A, B = map(int, input().split())
-#     if binary_search(P,A) < binary_search(P,B):
-#         ans = 'A'
-#     elif binary_search(P,A) > binary_search(P,B):
-#         ans = 'B'
-#     else:
-#         ans = 0
-#     print(f'#{t + 1} {ans}')
+
+def binary_search(book, target):
+    count = 0
+    left = 1
+    right = book
+    while left <= right:
+        middle = (left+right)//2
+        count += 1
+        if middle == target:
+            return count
+        elif middle > target:
+            right = middle
+        else:
+            left = middle
+
+
+T = int(input())
+for t in range(T):
+    P, A, B = map(int, input().split())
+    if binary_search(P, A) < binary_search(P, B):
+        ans = 'A'
+    elif binary_search(P, A) > binary_search(P, B):
+        ans = 'B'
+    else:
+        ans = 0
+    print(f'#{t + 1} {ans}')
