@@ -10,7 +10,6 @@ if count M 이면 검사
 '''
 
 
-
 def check(lst, M):
     ans = 0
     for i in range(len(lst)):
