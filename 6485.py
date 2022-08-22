@@ -16,10 +16,7 @@ for t in range(T):
         print(bus_stop[i], end=' ')
     print()
 
-
-
-
-# p : 정류장 개수
+# P : 정류장 개수
 # N : 버스 노선 개수
 # A 이상 B 이하 모든 정류장 다 다님 +=1
 # 1
