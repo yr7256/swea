@@ -1,3 +1,7 @@
+# from collections import deque
+import sys
+sys.stdin = open('input.txt')
+
 for t in range(10):  # test case 10개
     N = int(input())
     building_list = list(map(int, input().split()))
@@ -14,3 +18,24 @@ for t in range(10):  # test case 10개
         if max_diff > 0:  # 0보다 작거나 같다면 조망권 확보 x 이므로 더하면 안된다.
             answer += max_diff
     print(f'#{t+1} {answer}')
+
+
+# 메모리 초과
+# def diff():
+#     return queue[2] - max([queue[x] for x in range(5) if not x == 2])
+#
+#
+# for t in range(10):
+#     N = int(input())
+#     building_list = list(map(int, input().split()))
+#     answer = 0
+#     queue = deque(building_list[0:5])
+#     waiting = deque(building_list[5:])
+#     while waiting:
+#         if diff() > 0:
+#             answer += diff()
+#         queue.popleft()
+#         queue.append(waiting.popleft())
+#     if diff() > 0:
+#         answer += diff()
+#     print(f'#{t+1} {answer}')
