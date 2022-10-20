@@ -3,6 +3,7 @@ from collections import deque
 
 def bfs(n):
     queue = deque([n])
+    visited[n] = 0
     while queue:
         x = queue.popleft()
         for current in adj[x]:
@@ -19,7 +20,7 @@ for t in range(10):
     for i in range(0, N, 2):
         adj[lst[i]].append(lst[i+1])
     bfs(start)
-    print(adj)
+    # print(adj)
     # print(visited)
     max_visited = max(visited)
     ans = 0

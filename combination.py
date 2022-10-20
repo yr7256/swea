@@ -6,7 +6,7 @@
 # for i in range(3):
 #     for j in range(i, 3):
 #         print(arr[i], arr[j])
-#
+
 arr = ['A', 'B', 'C', 'D', 'E']
 sel = [0, 0, 0]
 
